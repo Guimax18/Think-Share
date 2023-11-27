@@ -1,126 +1,167 @@
+@charset "UTF-8";
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: normal;
-  color: black;
-  scroll-behavior: smooth;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
-body .bgPrincipal {
-  z-index: 0;
+
+body * {
+  box-sizing: border-box;
+}
+
+.main-login {
+  width: 100vw; /* largura da pagina 100vw = 1000px e 1vh = 10px*/
+  height: 100vh; /*altura da pagina*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b133b;
+}
+
+.background {
   width: 100%;
-  display: block;
+  height: 100vh;
   position: absolute;
-  top: 0;
+  z-index: 0;
 }
-body .container {
+
+.left-login {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: relative;
-  background-color: #616ff0;
-  width: 450px;
-  height: 550px;
+}
+.left-login h1 {
+  font-size: 3vw;
+  color: #6372f4;
+}
+.left-login h1 span {
+  font: 700;
+  -webkit-text-stroke: 1px white;
+}
+.left-login .image {
+  width: 35vw;
+}
+
+.right-login {
+  width: 50vw;
+  height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.right-login .card-login {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 35px 20px 35px; /*em baixo e em cima tem 30px e dos lados 35px de espaçamento interno*/
+  background: transparent;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   border-radius: 20px;
-  top: 23%;
-  left: 33%;
-  color: #ffffff;
+  border: 2px solid white;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.337254902); /*lados, em cima ou em baixo, blur (esfumado), cor da sombra*/
 }
-body .container .logo__principal {
-  width: 150px;
-  height: 120px;
-  margin-top: 20px;
+.right-login .card-login .logo {
+  width: 180px;
+  margin: 0;
+  padding: 0;
 }
-body .container .wrapper {
-  text-align: center;
+.right-login .card-login .textfield {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
-  align-items: center;
-  z-index: 5;
+  margin: 10px 0px;
 }
-body .container .wrapper .heading {
-  font-size: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 400;
-  margin-top: -60px;
-}
-body .container .wrapper .email {
-  font-size: 16px;
-  font-weight: 400;
-  margin: 0;
-  display: flex;
-  margin-left: 55px;
-}
-body .container .wrapper .senha {
-  font-size: 16px;
-  font-weight: 400;
-  margin: 0;
-  display: flex;
-  margin-left: 55px;
-}
-body .container .wrapper p {
-  font-size: 16px;
-  font-weight: 400;
-  margin: 0;
-  display: flex;
-  margin-left: 25px;
-}
-body .container .wrapper input {
-  width: 300px;
-  height: 35px;
-  margin: 10px;
-  margin-bottom: 5px;
+.right-login .card-login .textfield input {
+  width: 100%;
+  border: none;
   border-radius: 10px;
-  border: transparent;
+  padding: 15px;
+  background: #514869;
+  color: rgba(240, 255, 255, 0.8705882353);
+  font-size: 12pt;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.337254902); /*lados, em cima ou em baixo, blur (esfumado), cor da sombra*/
+  outline: none;
+  box-sizing: border-box;
 }
-body .container .wrapper a {
-  font-size: 16px;
-  text-decoration: none;
-  color: #ffffff;
-  display: flex;
-  position: relative;
-  left: 13%;
-  padding-bottom: 10px;
+.right-login .card-login .textfield label {
+  color: rgba(240, 255, 255, 0.8705882353);
+  margin-bottom: 10px;
 }
-body .container .wrapper button {
-  width: 200px;
-  height: 45px;
-  margin-top: 10px;
-  background-color: rgb(81, 83, 230);
-  border: solid 2px #ffffff;
-  color: black;
+.right-login .card-login .textfield ::-moz-placeholder {
+  color: rgba(240, 255, 255, 0.8705882353);
+}
+.right-login .card-login .textfield ::placeholder {
+  color: rgba(240, 255, 255, 0.8705882353);
+}
+.right-login .card-login .btn-login {
+  width: 100%;
+  padding: 16px 0px;
+  margin: 25px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #2b133b;
+  background: #6372f4;
   cursor: pointer;
-  border-radius: 20px;
-  margin-left: 10px;
+  box-shadow: 0px 10px 40px -12px rgba(0, 255, 128, 0.3215686275); /* lados, em cima ou em baixo, blur (esfumado), sprading, cor da sombra*/
 }
-body .container .wrapper button .text__button {
-  text-align: center;
-  align-items: center;
-  padding-top: 7px;
+.right-login .card-login .btn-login:hover {
+  background-color: #1a30f5;
+  color: white;
 }
-body .container .wrapper button:hover {
-  background-color: rgb(93, 32, 237);
-}
-body .container .wrapper button a {
-  font-size: 20px;
-  padding: 10px;
-  color: #ffffff;
+.right-login .card-login .striped {
   display: flex;
-  margin-left: 33px;
-  text-align: center;
+  color: white;
+  font-size: 12px;
 }
-body .container .wrapper .striped {
-  margin-right: 20px;
-  margin-top: 20px;
-  display: flex;
+.right-login .card-login .striped .meio {
+  padding: 0 10px;
 }
-body .container .wrapper .login-form-footer {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
+.right-login .card-login .cadastro__button {
   margin-top: 10px;
-  margin-right: 75px;
+  color: white;
+  text-decoration: none;
+}
+.right-login .card-login .cadastro__button:hover {
+  color: #6372f4;
+}
+
+@media only screen and (max-width: 950px) { /*quando a tela atingir 950px o card deve diminuir também*/
+  .card-login {
+    width: 85%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main-login {
+    flex-direction: column;
+  }
+  .left-login {
+    width: 100%;
+    height: auto;
+  }
+  .left-login h1 {
+    display: none;
+  }
+  .left-login .image {
+    width: 80vw;
+  }
+  .right-login {
+    width: 100%;
+    height: auto;
+  }
+  .right-login .card-login {
+    width: 90%;
+  }
 }/*# sourceMappingURL=login.css.map */

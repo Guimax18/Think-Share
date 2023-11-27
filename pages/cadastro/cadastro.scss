@@ -1,0 +1,184 @@
+
+
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body *{
+    box-sizing: border-box;
+}
+
+.main-login{
+    width: 100vw; /* largura da pagina 100vw = 1000px e 1vh = 10px*/
+    height: 100vh; /*altura da pagina*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #000000, #242424,#6565f8, );
+}
+
+
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    h1{
+        font-size: 3vw;
+        color: #6372f4;
+
+        span {
+            font: 700;
+            -webkit-text-stroke: 1px #ffff;
+        }
+    }
+
+    .image{
+        width: 35vw;
+
+    }
+}
+
+.right-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        color:#6565f8;
+    }
+
+    .card-login{
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px 35px;  /*em baixo e em cima tem 30px e dos lados 35px de espaçamento interno*/
+        background: transparent;
+        backdrop-filter: blur(5px);
+        border-radius: 20px;
+        border: 2px solid #ffff;
+        box-shadow: 0px 10px 40px #00000056; /*lados, em cima ou em baixo, blur (esfumado), cor da sombra*/
+    
+
+        .textfield{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin: 12px 0px;
+
+             input{
+                width: 100%;
+                height: 40px;
+                border: none;
+                border-radius: 10px;
+                padding: 15px;
+                background: #514869;
+                color: #f0ffffde;
+                font-size: 12pt;
+                box-shadow: 0px 10px 40px #00000056; /*lados, em cima ou em baixo, blur (esfumado), cor da sombra*/;
+                outline: none;
+                box-sizing: border-box;
+            }
+
+            label{
+                color:#f0ffffde;
+                margin-bottom: 10px;
+            }
+
+            & ::placeholder{
+                color: #f0ffffde;
+            }
+        }
+
+        .btn-login{
+            width: 100%;
+            padding: 16px 0px;
+            margin: 25px;
+            border: none;
+            border-radius: 8px;
+            outline:none;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: #2b133b;
+            background: #6372f4;
+            cursor: pointer;
+            box-shadow: 0px 10px 40px -12px #00ff8052; /* lados, em cima ou em baixo, blur (esfumado), sprading, cor da sombra*/
+            
+
+            &:hover {
+                background-color: #1a30f5;
+                color: #ffff;
+            }
+        }
+
+        .striped {
+            display: flex;
+            color: #ffff;
+            font-size: 12px;
+
+            .meio {
+                padding: 0 10px;
+            }
+        }
+
+        .cadastro__button {
+            margin-top: 10px;
+            color: #ffff;
+            text-decoration: none;
+
+            &:hover {
+                color: #6372f4;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 950px){  /*quando a tela atingir 950px o card deve diminuir também*/
+    .card-login{
+        width: 85%;
+    }
+}
+    
+@media only screen and (max-width: 600px){
+    .main-login{
+        flex-direction: column;
+    }
+
+    .left-login {
+        width: 100%;
+        height: auto;
+
+        h1{
+            display: none;
+        }
+        
+        .image{
+            width: 80vw;
+        }
+    }
+
+    .right-login{
+        width: 100%;
+        height: auto;
+
+        .card-login{
+            width: 90%;
+        }
+    }
+}

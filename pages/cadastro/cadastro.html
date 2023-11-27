@@ -2,12 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/pages/cadastro/cadastro.scss">
-    <title>Cadastro</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Login</title>
 </head>
 <body>
-    
-    
+
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Faça seu Cadastro</h1>
+            <img src="/pages/assets/images/animaçãoCadastro.svg" class="image"alt=" astronaut-animate">
+        </div>
+            <div class="right-login"> <!--Área Login-->
+                <div class="card-login"> <!--Card do login com usuario e senha-->
+                    <h1 class="titulo__cadastro">Cadastro</h1>
+                    <div class="textfield"> <!--campo do usuario-->
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" placeholder="Nome">
+                    </div>
+                    <div class="textfield"> <!--campo do usuario-->
+                        <label for="Email ou telefone">Email ou telefone</label>
+                        <input type="text" name="email" placeholder="Email ou telefone">
+                    </div>
+                    <div class="textfield"> <!--campo da senha-->
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" placeholder="Senha">
+                    </div>
+                    <div class="textfield"> <!--campo da senha-->
+                        <label for="senha">Confirmar Senha</label>
+                        <input type="password" name="senha" placeholder="Senha">
+                    </div>
+                    <button class="btn-login">Cadastre-se</button> <!--botão de login-->
+                    <a class="cadastro__button" href="/pages/login/login.html">Já tem conta?</a>
+                          
+                    </div>
+                </div>
+                </div>
+    </div>
 </body>
 </html>
