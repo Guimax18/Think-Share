@@ -1,1 +1,23 @@
-/*# sourceMappingURL=home.css.map */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #000000;
+}
+body .bg__principal {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+body .bg__principal .cabecalho {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  z-index: 2;
+}
+body .bg__principal .cabecalho .logo__principal {
+  width: 200px;
+}/*# sourceMappingURL=home.css.map */
