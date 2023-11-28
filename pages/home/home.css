@@ -1,23 +1,155 @@
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background: #000000;
-}
-body .bg__principal {
-  position: absolute;
   width: 100%;
   height: 100vh;
-  z-index: 1;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-image: url(/pages/assets/images/fundoDark2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-body .bg__principal .cabecalho {
+body .cabecalho {
   display: flex;
   align-items: center;
   text-align: center;
-  padding: 10px;
-  position: relative;
-  z-index: 2;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
 }
-body .bg__principal .cabecalho .logo__principal {
-  width: 200px;
+body .cabecalho .logo__principal {
+  width: 120px;
+  margin: 0px 0px 0px 20px;
+}
+body .cabecalho .search-container {
+  position: relative;
+}
+body .cabecalho .search-container .search-box {
+  display: flex;
+  background: rgba(84, 83, 83, 0.548);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  width: 230px;
+  height: 28px;
+  align-items: center;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-radius: 50px;
+  border: 3px solid #6372f4;
+}
+body .cabecalho .search-container .search-box::-moz-placeholder {
+  color: white;
+}
+body .cabecalho .search-container .search-box::placeholder {
+  color: white;
+}
+body .cabecalho .search-container .search-icon {
+  position: absolute;
+  top: 56%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+body .cabecalho .social {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+body .cabecalho .social .comunidade {
+  width: 45px;
+  height: 45px;
+}
+body .cabecalho .social .user {
+  width: 50px;
+  height: 50px;
+  margin-right: 40px;
+}
+body .slidebar {
+  position: fixed;
+  left: 0;
+  top: 100px;
+  width: 275px;
+  height: 100%;
+  background: rgba(86, 86, 86, 0.35);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  padding: 15px 14px;
+  z-index: 9;
+  transition: all 0.5s ease;
+}
+body .slidebar .menu {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+body .slidebar .menu .btn__criar {
+  display: flex;
+  width: 170px;
+  height: 49px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+  margin-bottom: 10px;
+}
+body .slidebar .menu .btn__criar:hover {
+  border: 2px solid #6372f4;
+  color: #6372f4;
+}
+body .slidebar .menu .btn__criar img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+body .slidebar .menu .menu__div {
+  display: flex;
+  width: 170px;
+  height: 45px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+  margin: 10px;
+}
+body .slidebar .menu .menu__div:hover {
+  border: 2px solid #6372f4;
+  color: #6372f4;
+}
+body .slidebar .menu .menu__div .menu__link {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  margin-right: 35px;
+}
+body .slidebar .menu .menu__div .menu__link:hover {
+  color: #6372f4;
+}
+body .slidebar .menu .menu__div img {
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+}
+body .slidebar .menu .menu__div .ciencias {
+  width: 30px;
+  height: 30px;
+}
+body .slidebar .menu .menu__div .link__arte {
+  margin-right: 55px;
+}
+body .slidebar .menu .menu__div .arte {
+  margin-right: 25px;
 }/*# sourceMappingURL=home.css.map */
