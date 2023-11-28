@@ -1,14 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   box-sizing: border-box;
   font-family: sans-serif;
   background-image: url(/pages/assets/images/fundoDark2.jpg);
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 body .cabecalho {
   display: flex;
@@ -17,13 +15,11 @@ body .cabecalho {
   justify-content: space-between;
   width: 100%;
   height: 100px;
-}
-body .cabecalho .logo__principal {
-  width: 120px;
-  margin: 0px 0px 0px 20px;
+  position: fixed;
 }
 body .cabecalho .search-container {
   position: relative;
+  left: 500px;
 }
 body .cabecalho .search-container .search-box {
   display: flex;
@@ -63,18 +59,18 @@ body .cabecalho .social .comunidade {
 body .cabecalho .social .user {
   width: 50px;
   height: 50px;
-  margin-right: 40px;
+  margin-right: 80px;
 }
 body .slidebar {
   position: fixed;
   left: 0;
-  top: 100px;
+  top: 0;
   width: 275px;
   height: 100%;
   background: rgba(86, 86, 86, 0.35);
   -webkit-backdrop-filter: blur(25px);
           backdrop-filter: blur(25px);
-  padding: 15px 14px;
+  padding: 15px 10px;
   z-index: 9;
   transition: all 0.5s ease;
 }
@@ -85,6 +81,10 @@ body .slidebar .menu {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+body .slidebar .menu .logo__principal {
+  width: 120px;
+  margin: -25px 0px 0px 0px;
 }
 body .slidebar .menu .btn__criar {
   display: flex;
@@ -152,4 +152,169 @@ body .slidebar .menu .menu__div .link__arte {
 }
 body .slidebar .menu .menu__div .arte {
   margin-right: 25px;
+}
+body .box__sentindo {
+  display: flex;
+  position: relative;
+  top: 100px;
+  left: 310px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(84, 83, 83, 0.548);
+  width: 70vw;
+  height: 100px;
+  border-radius: 30px;
+  border: 2px solid #6372f4;
+}
+body .box__sentindo .img__user {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+}
+body .box__sentindo input {
+  width: 50vw;
+  height: 30px;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+body .box__sentindo input::-moz-placeholder {
+  color: black;
+  font-size: 16px;
+  font: 400;
+  padding: 10px 10px;
+}
+body .box__sentindo input::placeholder {
+  color: black;
+  font-size: 16px;
+  font: 400;
+  padding: 10px 10px;
+}
+body .box__sentindo .btn__criar {
+  display: flex;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+}
+body .box__sentindo .btn__criar:hover {
+  border: 2px solid #6372f4;
+  color: #6372f4;
+}
+body .box__sentindo .btn__criar img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+body .post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  top: 120px;
+  left: 30%;
+  width: 60vw;
+}
+body .post .posting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(84, 83, 83, 0.548);
+  border-radius: 30px;
+  margin: 20px 0px;
+}
+body .post .posting .post__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 60vw;
+}
+body .post .posting .post__container .user__post {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 108px;
+  height: 150px;
+  padding: 20px 40px 0 40px;
+}
+body .post .posting .post__container .user__post .img__user {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+body .post .posting .post__container .user__post a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+body .post .posting .post__container .descricao__post {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px 40px 10px 10px;
+}
+body .post .posting .post__container .descricao__post h2 {
+  font-size: 20px;
+  color: white;
+  text-align: justify;
+}
+body .post .posting .post__container .descricao__post p {
+  font-size: 14px;
+  color: white;
+  text-align: justify;
+}
+body .post .posting .post__container .descricao__post button {
+  background: transparent;
+  margin-top: 5px;
+  border: none;
+  width: 80px;
+  color: #fff;
+  cursor: pointer;
+}
+body .post .posting .post__container .descricao__post button:hover {
+  color: #6372f4;
+}
+body .post .posting .img__post {
+  width: 55vw;
+}
+body .post .posting .img__post img {
+  width: 100%;
+  height: 300px;
+}
+body .post .posting .container__icons {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 15px 0 20px 0;
+}
+body .post .posting .container__icons a {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  width: 130px;
+  height: 30px;
+  text-decoration: none;
+  color: #fff;
+  margin: 5px;
+}
+body .post .posting .container__icons a:hover {
+  background: #6372f4;
+}
+body .post .posting .container__icons a i {
+  margin-right: 10px;
 }/*# sourceMappingURL=home.css.map */
