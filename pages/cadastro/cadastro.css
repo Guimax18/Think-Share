@@ -29,10 +29,6 @@ body * {
   font-size: 3vw;
   color: #6372f4;
 }
-.left-login h1 span {
-  font: 700;
-  -webkit-text-stroke: 1px white;
-}
 .left-login .image {
   width: 35vw;
 }
@@ -45,24 +41,57 @@ body * {
   align-items: center;
   position: relative;
 }
-.right-login h1 {
-  margin: 0;
-  padding: 0;
-  color: #6565f8;
-}
 .right-login .card-login {
   width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 30px 35px; /*em baixo e em cima tem 30px e dos lados 35px de espaçamento interno*/
+  padding: 10px 35px; /*em baixo e em cima tem 30px e dos lados 35px de espaçamento interno*/
   background: transparent;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   border-radius: 20px;
   border: 2px solid white;
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.337254902); /*lados, em cima ou em baixo, blur (esfumado), cor da sombra*/
+}
+.right-login .card-login h1 {
+  margin: 0;
+  padding: 0;
+  color: #6565f8;
+}
+.right-login .card-login .img__usuario {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.right-login .card-login .img__usuario input[type=file] {
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+}
+.right-login .card-login .img__usuario label {
+  display: flex;
+  position: relative;
+  padding: 20px;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: 10px 0;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+.right-login .card-login .img__usuario label:hover {
+  color: #6372f4;
+  border: 2px solid #6372f4;
 }
 .right-login .card-login .textfield {
   width: 100%;
@@ -115,47 +144,39 @@ body * {
   background-color: #1a30f5;
   color: white;
 }
-.right-login .card-login .striped {
-  display: flex;
-  color: white;
-  font-size: 12px;
-}
-.right-login .card-login .striped .meio {
-  padding: 0 10px;
-}
 .right-login .card-login .cadastro__button {
-  margin-top: 10px;
+  margin-bottom: 10px;
   color: white;
   text-decoration: none;
 }
 .right-login .card-login .cadastro__button:hover {
   color: #6372f4;
 }
-
-@media only screen and (max-width: 950px) { /*quando a tela atingir 950px o card deve diminuir também*/
-  .card-login {
+@media only screen and (max-width: 950px) {
+  .right-login { /*quando a tela atingir 950px o card deve diminuir também*/ }
+  .right-login .card-login {
     width: 85%;
   }
 }
 @media only screen and (max-width: 600px) {
-  .main-login {
+  .right-login .main-login {
     flex-direction: column;
   }
-  .left-login {
+  .right-login .left-login {
     width: 100%;
     height: auto;
   }
-  .left-login h1 {
+  .right-login .left-login h1 {
     display: none;
   }
-  .left-login .image {
+  .right-login .left-login .image {
     width: 80vw;
   }
-  .right-login {
+  .right-login .right-login {
     width: 100%;
     height: auto;
   }
-  .right-login .card-login {
+  .right-login .right-login .card-login {
     width: 90%;
   }
 }/*# sourceMappingURL=cadastro.css.map */
