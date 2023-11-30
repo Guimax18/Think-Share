@@ -121,6 +121,9 @@ body * {
   background-color: #1a30f5;
   color: white;
 }
+.right-login .card-login .btn-login a {
+  text-decoration: none;
+}
 .right-login .card-login .striped {
   display: flex;
   color: white;
